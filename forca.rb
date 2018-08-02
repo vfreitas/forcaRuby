@@ -46,6 +46,12 @@ def salva_ranking(nome, pontos_totais)
 end
 
 
+def ler_ranking
+	conteudo = File.read("rank.txt")
+	conteudo.slpit("\n")	
+end
+
+
 def joga(nome)
 	palavra_secreta = escolhe_palavra_secreta
 
