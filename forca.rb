@@ -29,10 +29,11 @@ end
 def escolhe_palavra_secreta
 	informa_escolhendo_palavra
 
+	texto = File.read("dicionario.txt")
+	todas_as_palavras = texto.split("\n")
+	numero_escolhido = rand(todas_as_palavras.size)
+	palavra_secreta = todas_as_palavras[numero_escolhido]
 
-	palavra_secreta = "Programador"
-
-	
 	informa_numero_de_letras(palavra_secreta)
 	deseja_boa_sorte
 	palavra_secreta.upcase
