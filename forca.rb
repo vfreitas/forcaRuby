@@ -36,8 +36,8 @@ end
 
 def conta_letras(texto, letra)
 	letras_encontradas = 0
-	for i in 0..(texto.size - 1)
-		if texto[i] == letra
+	for caracter in texto.chars
+		if caracter == letra
 			letras_encontradas += 1
 		end
 	end
