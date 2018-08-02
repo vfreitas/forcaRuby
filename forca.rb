@@ -1,3 +1,5 @@
+require_relative 'ui'
+
 def joga(nome)
 	palavra_secreta = escolhe_palavra_secreta
 
@@ -25,7 +27,7 @@ def joga(nome)
 				pontos_ate_agora -= 30
 				erros += 1
 			else
-				informa_letras_encontradas
+				informa_letras_encontradas(chute, letras_encontradas)
 			end
 		else
 			informa_palavra_chutada(chute)
