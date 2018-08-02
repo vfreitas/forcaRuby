@@ -14,7 +14,7 @@ end
 
 
 def palavra_mascarada(chutes, palavra_secreta)
-	mascara = []
+	mascara = ""
 	for letra in palavra_secreta.chars
 		if chutes.include? letra
 			mascara << letra
