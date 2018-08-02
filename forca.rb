@@ -43,6 +43,10 @@ def joga(nome)
 
 	while erros < 5
 		chute = pede_chute(erros, chutes)
+		if chutes.include?(chute)
+			puts "Você ja chutou isso!"
+			next
+		end
 		chutes << chute
 
 		chutou_uma_letra = chute.size == 1
