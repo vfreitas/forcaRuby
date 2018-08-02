@@ -62,7 +62,7 @@ def joga(nome)
 		end
 	end
 
-	puts "Você terminou o jogo com #{pontos_ate_agora} pontos! "
+	puts "Você terminou o jogo com #{pontos_ate_agora} pontos!"
 end
 
 nome = da_boas_vindas
