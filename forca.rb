@@ -1,5 +1,17 @@
 require_relative 'ui'
 
+def pede_chute_valido(chutes, erros)
+	loop do
+		chute = pede_chute(erros, chutes)
+		if chutes.include?(chute)
+			avisa_chute_repetido
+		else
+			return chute
+		end
+	end
+end
+
+
 def joga(nome)
 	palavra_secreta = escolhe_palavra_secreta
 
@@ -8,11 +20,8 @@ def joga(nome)
 	pontos_ate_agora = 0
 
 	while erros < 5
-		chute = pede_chute(erros, chutes)
-		if chutes.include?(chute)
-			avisa_chute_repetido
-			next
-		end
+		chute = pede_chute_valido(chutes, erros)
+
 		chutes << chute
 
 		chutou_uma_letra = chute.size == 1
