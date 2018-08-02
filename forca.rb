@@ -108,7 +108,10 @@ def jogo_da_forca
 	loop do
 		pontos_totais += joga(nome)
 		informa_pontos_totais(pontos_totais)
-		salva_ranking(nome, pontos_totais)
+
+		if ler_ranking[1].to_i < pontos_totais
+			salva_ranking(nome, pontos_totais)
+		end
 		if not jogar_novamente
 			break
 		end	
