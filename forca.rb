@@ -82,15 +82,19 @@ def joga(nome)
 	end
 
 	informa_pontuacao(pontos_ate_agora)
+	pontos_ate_agora
 end
 
 
 
 def jogo_da_forca
 	nome = da_boas_vindas
+	pontos_totais = 0
+
 
 	loop do
-		joga(nome)
+		pontos_totais += joga(nome)
+		informa_pontos_totais(pontos_totais)
 		if not jogar_novamente
 			break
 		end	

@@ -31,6 +31,11 @@ def pede_chute
 end
 
 
+def	informa_pontos_totais(pontos_totais)
+	puts "Pontos Totais = #{pontos_totais}"	
+end
+
+
 def avisa_chute_repetido
 	puts "Você ja chutou isso!"
 end
