@@ -1,11 +1,50 @@
 def da_boas_vindas
-	puts "Bem vindo ao jogo da forca!!\n\n"
-	puts "Informe o seu nome:"
+	puts "==============="
+	puts "Jogo da Forca!!"
+	puts "===============\n\n"
+	puts "Qual é o seu nome:"
 	nome = gets.strip
 	puts "\nComeçaremos o jogo para você, #{nome}!\n\n"
 	nome
 end
 
+
+def desenha_forca(erros)
+	cabeca = "   "
+	bracos = "   "
+	pernas = "   "
+	corpo  = " "
+
+	if erros >= 1
+		cabeca = "(ºº)"	
+	end
+	if erros >= 2
+		bracos = " | "
+		corpo = "|"
+	end
+	if erros >= 3
+		bracos = "\\| "
+	end
+	if erros >= 4
+		bracos = "\\|/"
+	end
+	if erros >= 5
+		pernas = "/  "
+	end
+	if erros >= 6
+		pernas = "/ \\"
+	end
+	
+
+
+	puts "  _______     "
+	puts " |/      |    "
+	puts " |       #{cabeca}     "
+	puts " |       #{bracos}     "
+	puts " |        #{corpo}    "
+	puts " |        #{pernas}    "
+	
+end
 
 
 def jogar_novamente
@@ -17,6 +56,7 @@ end
 
 def cabecalho_de_tentativas(erros, chutes, mascara)
 	puts "\n\n"
+	desenha_forca(erros)
 	puts "Palavra: #{mascara}"
 	puts "Erros: #{erros}"
 	puts "chutes: #{chutes}"

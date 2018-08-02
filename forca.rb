@@ -48,7 +48,7 @@ def joga(nome)
 	chutes = []
 	pontos_ate_agora = 0
 
-	while erros < 5
+	while erros <= 6
 		mascara = palavra_mascarada(chutes, palavra_secreta)
 		chute = pede_chute_valido(chutes, erros, mascara)
 		chutes << chute
