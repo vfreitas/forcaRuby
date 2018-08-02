@@ -38,7 +38,7 @@ def informa_letra_chutada(chute)
 	puts "Você chutou a letra #{chute}!\n\n"
 end
 
-def 
+def informa_erro
 	puts "Que pena, você errou!"
 end
 
