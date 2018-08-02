@@ -26,6 +26,19 @@ def palavra_mascarada(chutes, palavra_secreta)
 end
 
 
+def escolhe_palavra_secreta
+	informa_escolhendo_palavra
+
+
+	palavra_secreta = "Programador"
+
+	
+	informa_numero_de_letras(palavra_secreta)
+	deseja_boa_sorte
+	palavra_secreta.upcase
+end
+
+
 def joga(nome)
 	palavra_secreta = escolhe_palavra_secreta
 
