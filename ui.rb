@@ -23,10 +23,11 @@ def jogar_novamente
 end
 
 
-def cabecalho_de_tentativas(erros, chutes)
+def cabecalho_de_tentativas(erros, chutes, mascara)
 	puts "\n\n"
 	puts "Erros: #{erros}"
 	puts "chutes: #{chutes}"
+	puts "Palavra: #{mascara}"
 end
 
 
