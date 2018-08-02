@@ -48,6 +48,23 @@ def joga(nome)
 		chutou_uma_letra = chute.size == 1
 		if chutou_uma_letra
 			puts "Você chutou a letra #{chute}!"
+
+			letra_procurada = chute
+			letras_encontradas = 0
+			for i in 0..(palavra_secreta.size - 1)
+				if palavra_secreta[i] == letra_procurada
+					letras_encontradas += 1
+				end
+			end
+
+			if letras_encontradas == 0
+				puts "Que pena, você errou!"
+				pontos_ate_agora -= 30
+				erros += 1
+			else
+				puts "A letra #{chute} está'presente na palavra secreta #{letras_encontradas} vezes!"
+			end
+
 		else
 			puts "Você chutou a palavra #{chute}!\n\n"
 			acertou = chute == palavra_secreta
@@ -63,7 +80,7 @@ def joga(nome)
 		end
 	end
 
-	puts "Você terminou o jogo com #{pontos_ate_agora} pontos!"
+	puts "\n\n\nVocê terminou o jogo com #{pontos_ate_agora} pontos!"
 end
 
 nome = da_boas_vindas
