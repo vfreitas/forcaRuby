@@ -1,8 +1,9 @@
 require_relative 'ui'
 
 def pede_chute_valido(chutes, erros)
+	cabecalho_de_tentativas(erros, chutes)
 	loop do
-		chute = pede_chute(erros, chutes)
+		chute = pede_chute
 		if chutes.include?(chute)
 			avisa_chute_repetido
 		else

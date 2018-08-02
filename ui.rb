@@ -23,11 +23,15 @@ def jogar_novamente
 end
 
 
-def pede_chute(erros, chutes)
+def cabecalho_de_tentativas(erros, chutes)
 	puts "\n\n"
 	puts "Erros: #{erros}"
 	puts "chutes: #{chutes}"
-	puts "Informe agora uma letra ou uma palavra!"
+end
+
+
+def pede_chute
+	puts "\nInforme agora uma letra ou uma palavra!"
 	chute = gets.strip
 	puts "Será que acertou?"
 	chute.upcase
