@@ -25,9 +25,9 @@ end
 
 def cabecalho_de_tentativas(erros, chutes, mascara)
 	puts "\n\n"
+	puts "Palavra: #{mascara}"
 	puts "Erros: #{erros}"
 	puts "chutes: #{chutes}"
-	puts "Palavra: #{mascara}"
 end
 
 
