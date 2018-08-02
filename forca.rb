@@ -1,4 +1,5 @@
 require_relative 'ui'
+require_relative 'ranking'
 
 def pede_chute_valido(chutes, erros, mascara)
 	cabecalho_de_tentativas(erros, chutes, mascara)
@@ -37,18 +38,6 @@ def escolhe_palavra_secreta
 	informa_numero_de_letras(palavra_secreta)
 	deseja_boa_sorte
 	palavra_secreta.upcase
-end
-
-
-def salva_ranking(nome, pontos_totais)
-	conteudo = "#{nome}\n#{pontos_totais}"
-	File.write("rank.txt", conteudo)
-end
-
-
-def ler_ranking
-	conteudo = File.read("rank.txt")
-	conteudo.split("\n")	
 end
 
 
