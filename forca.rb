@@ -8,41 +8,41 @@ def joga(nome)
 	while erros < 5
 		chute = pede_chute(erros, chutes)
 		if chutes.include?(chute)
-			puts "Você ja chutou isso!"
+			avisa_chute_repetido
 			next
 		end
 		chutes << chute
 
 		chutou_uma_letra = chute.size == 1
 		if chutou_uma_letra
-			puts "Você chutou a letra #{chute}!\n\n"
+			informa_letra_chutada(chute)
 
 			letra_procurada = chute[0]
 			letras_encontradas = palavra_secreta.count(letra_procurada)
 
 			if letras_encontradas == 0
-				puts "Que pena, você errou!"
+				informa_erro
 				pontos_ate_agora -= 30
 				erros += 1
 			else
-				puts "A letra #{chute} está'presente na palavra secreta #{letras_encontradas} vezes!"
+				informa_letras_encontradas
 			end
 		else
-			puts "Você chutou a palavra #{chute}!\n\n"
+			informa_palavra_chutada(chute)
 			acertou = chute == palavra_secreta
 			if acertou
-				puts "Parabéns, você acertou a palavra secreta!"
+				informa_acerto_palavra
 				pontos_ate_agora += 100
 				break
 			else
-				puts "Que pena, você errou!"
+				informa_erro
 				pontos_ate_agora -= 30
 				erros += 1
 			end
 		end
 	end
 
-	puts "\n\n\nVocê terminou o jogo com #{pontos_ate_agora} pontos!"
+	informa_pontuacao(pontos_ate_agora)
 end
 
 nome = da_boas_vindas

@@ -29,3 +29,44 @@ def pede_chute(erros, chutes)
 	puts "Será que acertou?"
 	chute.upcase
 end
+
+def avisa_chute_repetido
+	puts "Você ja chutou isso!"
+end
+
+def informa_letra_chutada(chute)
+	puts "Você chutou a letra #{chute}!\n\n"
+end
+
+def 
+	puts "Que pena, você errou!"
+end
+
+def informa_letras_encontradas(chute, letras_encontradas)
+	puts "A letra #{chute} está'presente na palavra secreta #{letras_encontradas} vezes!"
+end
+
+def informa_palavra_chutada(chute)
+	puts "Você chutou a palavra #{chute}!\n\n"
+end
+
+def informa_acerto_palavra
+	puts "Parabéns, você acertou a palavra secreta!"
+end
+
+def informa_pontuacao(pontos_ate_agora)
+	puts "\n\n\nVocê terminou o jogo com #{pontos_ate_agora} pontos!"
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
