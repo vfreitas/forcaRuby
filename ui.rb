@@ -36,6 +36,11 @@ def	informa_pontos_totais(pontos_totais)
 end
 
 
+def avisa_campeao_atual (dados)
+	puts "O campeao atual é #{dados[0]}, com #{dados[1]} pontos!"
+end
+
+
 def avisa_chute_repetido
 	puts "Você ja chutou isso!"
 end

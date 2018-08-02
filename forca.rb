@@ -48,7 +48,7 @@ end
 
 def ler_ranking
 	conteudo = File.read("rank.txt")
-	conteudo.slpit("\n")	
+	conteudo.split("\n")	
 end
 
 
@@ -101,6 +101,8 @@ end
 def jogo_da_forca
 	nome = da_boas_vindas
 	pontos_totais = 0
+
+	avisa_campeao_atual (ler_ranking)
 
 
 	loop do
