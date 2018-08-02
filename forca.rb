@@ -40,6 +40,12 @@ def escolhe_palavra_secreta
 end
 
 
+def salva_ranking(nome, pontos_totais)
+	conteudo = "#{nome}\n#{pontos_totais}"
+	File.write("rank.txt", conteudo)
+end
+
+
 def joga(nome)
 	palavra_secreta = escolhe_palavra_secreta
 
@@ -86,7 +92,6 @@ def joga(nome)
 end
 
 
-
 def jogo_da_forca
 	nome = da_boas_vindas
 	pontos_totais = 0
@@ -95,6 +100,7 @@ def jogo_da_forca
 	loop do
 		pontos_totais += joga(nome)
 		informa_pontos_totais(pontos_totais)
+		salva_ranking(nome, pontos_totais)
 		if not jogar_novamente
 			break
 		end	
