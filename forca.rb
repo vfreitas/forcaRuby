@@ -12,6 +12,7 @@ def escolhe_palavra_secreta
 	palavra_secreta = "Programador"
 	puts "A palavra secreta tem #{palavra_secreta.size} letras... "
 	puts "Boa Sorte!\n\n"
+	palavra_secreta.upcase
 end
 
 
