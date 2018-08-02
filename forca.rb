@@ -19,7 +19,7 @@ def palavra_mascarada(chutes, palavra_secreta)
 		if chutes.include? letra
 			mascara << letra
 		else
-			mascara << "_"
+			mascara << " _ "
 		end
 	end	
 	mascara	
