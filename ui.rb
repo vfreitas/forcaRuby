@@ -107,7 +107,17 @@ end
 
 
 def informa_acerto_palavra
-	puts "Parabéns, você acertou a palavra secreta!"
+    puts "Parabéns, você ganhou!"
+    puts "       ___________      "
+    puts "      '._==_==_=_.'     "
+    puts "      .-\\:      /-.    "
+    puts "     | (|:.     |) |    "
+    puts "      '-|:.     |-'     "
+    puts "        \\::.    /      "
+    puts "         '::. .'        "
+    puts "           ) (          "
+    puts "         _.' '._        "
+    puts "        '-------'       "
 end
 
 
